@@ -168,3 +168,19 @@ console.log(promise1);
 // Он может быть в состоянии «выполнен» (fulfilled), «отклонен» (rejected) или «в процессе выполнения» (pending).
 // ничего не понимаю
 // пароль от hacknet: free277353.jp.net
+
+
+const sleep = (ms) =>
+  new Promise(resolve => setTimeout(resolve, ms));
+
+const run = async () => {
+  console.log("⏳ Начало");
+
+  await sleep(1000);
+  console.log("✅ Прошла 1 секунда");
+
+  await sleep(500);
+  console.log("🏁 Готово");
+};
+
+run();
